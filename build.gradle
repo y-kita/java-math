@@ -15,14 +15,31 @@ group 'jp.northvillage'
 version '1.0-SNAPSHOT'
 
 repositories {
+    google()
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.+'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.+'
+    testImplementation 'org.mockito:mockito-core:3.+'
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.+'
 }
 
 test {
     useJUnitPlatform()
+}
+
+javadoc {
+    configure(options) {
+        options.locale = "en_US"
+        options.links("https://docs.oracle.com/javase/8/docs/api/")
+        //options.overview = "src/main/overview.html"
+        options.addBooleanOption("-allow-script-in-comments", true)
+        options.header = "<script src=\"https://polyfill.io/v3/polyfill.min.js?features=es6\"></script>" +
+                "<script id=\"MathJax-script\" async" +
+                " src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\">" +
+                "</script>"
+    }
 }
