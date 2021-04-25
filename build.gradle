@@ -1,0 +1,28 @@
+/*
+ * build.gradle
+ *
+ * Copyright (c) 2021 KITAMURA Yuichiro
+ *
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
+ */
+
+plugins {
+    id 'java'
+}
+
+group 'jp.northvillage'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
