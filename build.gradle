@@ -35,7 +35,7 @@ javadoc {
     configure(options) {
         options.locale = "en_US"
         options.links("https://docs.oracle.com/javase/8/docs/api/")
-        //options.overview = "src/main/overview.html"
+        options.overview = "src/main/overview.html"
         options.addBooleanOption("-allow-script-in-comments", true)
         options.header = "<script src=\"https://polyfill.io/v3/polyfill.min.js?features=es6\">" +
                 "</script>" +
