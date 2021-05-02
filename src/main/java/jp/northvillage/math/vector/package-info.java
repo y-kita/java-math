@@ -7,4 +7,9 @@
  * http://opensource.org/licenses/mit-license.php
  */
 
+/**
+ * Vectors.
+ *
+ * @since 1.0
+ */
 package jp.northvillage.math.vector;
